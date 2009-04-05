@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<codesense>
+
+	<!-- CodeIgniter Helpers -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.helpers</completions>
+		<complete-match capture="2">(\s)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- CodeIgniter Classes -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes</completions>
+		<complete-match capture="2">(\$this\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Benchmark methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.benchmark.methods</completions>
+		<complete-match capture="2">(benchmark\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Calendar methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.calendar.methods</completions>
+		<complete-match capture="2">(calendar\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Config methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.config.methods</completions>
+		<complete-match capture="2">(config\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- DB methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.db.methods</completions>
+		<complete-match capture="2">(db\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Email methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.email.methods</completions>
+		<complete-match capture="2">(email\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Encrypt methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.encrypt.methods</completions>
+		<complete-match capture="2">(encrypt\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Upload methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.upload.methods</completions>
+		<complete-match capture="2">(upload\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Form Validation methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.form_validation.methods</completions>
+		<complete-match capture="2">(form_validation\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- FTP methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.ftp.methods</completions>
+		<complete-match capture="2">(ftp\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- HTML Table methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.table.methods</completions>
+		<complete-match capture="2">(table\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Image Library methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.image_lib.methods</completions>
+		<complete-match capture="2">(image_lib\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Input methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.input.methods</completions>
+		<complete-match capture="2">(input\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Loader methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.load.methods</completions>
+		<complete-match capture="2">(load\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Lang methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.lang.methods</completions>
+		<complete-match capture="2">(lang\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Output methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.output.methods</completions>
+		<complete-match capture="2">(output\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Pagination methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.pagination.methods</completions>
+		<complete-match capture="2">(pagination\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Session methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.session.methods</completions>
+		<complete-match capture="2">(session\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Trackback methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.trackback.methods</completions>
+		<complete-match capture="2">(trackback\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Template Parser methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.parser.methods</completions>
+		<complete-match capture="2">(parser\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Typography methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.typography.methods</completions>
+		<complete-match capture="2">(typography\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- Unit Testing methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.unit.methods</completions>
+		<complete-match capture="2">(unit\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- URI methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.uri.methods</completions>
+		<complete-match capture="2">(uri\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- User agent methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.agent.methods</completions>
+		<complete-match capture="2">(agent\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- XMLRPC methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.xmlrpc.methods</completions>
+		<complete-match capture="2">(xmlrpc\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- XMLRPCS methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.xmlrpcs.methods</completions>
+		<complete-match capture="2">(xmlrpcs\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+	<!-- ZIP methods -->
+	<provider>
+		<selector>source.php</selector>
+		<completions>com.codeigniter.classes.zip.methods</completions>
+		<complete-match capture="2">(zip\-\>)([a-zA-Z0-9]*)</complete-match>
+	</provider>
+	
+</codesense>

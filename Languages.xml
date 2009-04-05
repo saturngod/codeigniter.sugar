@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	
+	CodeIgniter Sugar
+	Based on CI 1.7.1
+	Created by Anthony Short
+	Version 1.0
+	Latest Releases @ http://anthonyshort.com.au/projects/
+	
+-->
+
+<settings>
+	
+	<language id="com.anthonyshort.codeigniter">
+		
+		<!-- Should really be syntax-name -->
+		<root-zone>sourcecode.php.codeigniter</root-zone>
+		<name>PHP-CodeIgniter</name>
+		<detectors>
+			<extension casesensitive="false">phps</extension>
+			<extension casesensitive="false">inc</extension>
+			<extension casesensitive="false">php</extension>
+		</detectors>
+		
+		<meta>
+			<name>CodeIgniter</name>
+		    <description>CodeIgniter sugar for Espresso.</description>
+		    <author>Anthony Short</author>
+		    <identifier>codeigniter</identifier>
+		    <version status="preview">1.0b1</version>
+		    <dependencies>
+		    	<dependency id="com.gridlee.PHP">PHP</dependency>
+                <dependency id="name.elliottcable.Sugar.Regex">Regex</dependency>
+                <dependency id="net.fileability.SQL">SQL</dependency>
+            </dependencies>
+		</meta>
+		
+	</language>
+	
+</settings>

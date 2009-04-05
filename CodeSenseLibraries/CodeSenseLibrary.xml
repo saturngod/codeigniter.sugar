@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+CodeSense Libraries simply define lists of completions, categorized by keys. They don't define any criteria for when they should be used; this is the domain of a CodeSense Provider.
+
+-->
+<codesense version="1.0">
+
+	<behavior>
+        <append-dynamic>
+	        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+	        <transform-into>($1);$2</transform-into>
+	    </append-dynamic>
+    </behavior>
+    
+    <set name="com.codeigniter.helpers">
+    
+    	<completion string="element" />
+    	<completion string="random_element" />
+    	
+    	<completion string="set_cookie" />
+    	<completion string="get_cookie" />
+    	<completion string="delete_cookie" />
+    	
+    	<completion string="now" />
+    	<completion string="mdate" />
+    	<completion string="standard_date" />
+    	<completion string="local_to_gmt" />
+    	<completion string="gmt_to_local" />
+    	<completion string="mysql_to_unix" />
+    	<completion string="unix_to_human" />
+    	<completion string="human_to_unix" />
+    	<completion string="timespan" />
+    	<completion string="days_in_month" />
+    	<completion string="timezones" />
+    	<completion string="timezone_menu" />
+		
+		<completion string="directory_map" />
+		
+		<completion string="force_download" />
+		
+		<completion string="valid_email" />
+		<completion string="send_email" />
+		
+		<completion string="read_file" />
+		<completion string="write_file" />
+		<completion string="delete_files" />
+		<completion string="get_filenames" />
+		<completion string="get_dir_file_info" />
+		<completion string="get_file_info" />
+		<completion string="get_mime_by_extension" />
+		<completion string="symbolic_permissions" />
+		<completion string="octal_permissions" />
+	
+		<completion string="form_open" />
+		<completion string="form_open_multipart" />
+		<completion string="form_hidden" />
+		<completion string="form_input" />
+		<completion string="form_password" />
+		<completion string="form_upload" />
+		<completion string="form_textarea" />
+		<completion string="form_dropdown" />
+		<completion string="form_fieldset" />
+		<completion string="form_fieldset_close" />
+		<completion string="form_checkbox" />
+		<completion string="form_radio" />
+		<completion string="form_submit" />
+		<completion string="form_label" />
+		<completion string="form_reset" />
+		<completion string="form_button" />
+		<completion string="form_close" />
+		<completion string="form_prep" />
+		<completion string="set_value" />
+		<completion string="set_select" />
+		<completion string="set_checkbox" />
+		<completion string="set_radio" />
+
+		<completion string="br" />
+		<completion string="heading" />
+		<completion string="img" />
+		<completion string="link_tag" />
+		<completion string="nbs" />
+		<completion string="ol" />
+		<completion string="ul" />
+		<completion string="meta" />
+		<completion string="doctype" />
+		
+		<completion string="set_realpath" />
+		
+		<completion string="xss_clean" />
+		<completion string="dohash" />
+		<completion string="strip_image_tags" />
+		<completion string="encode_php_tags" />
+		
+		<completion string="get_clickable_smileys" />
+		<completion string="js_insert_smiley" />
+		<completion string="parse_smileys" />
+		
+		<completion string="random_string" />
+		<completion string="alternator" />
+		<completion string="repeater" />
+		<completion string="reduce_double_slashes" />
+		<completion string="trim_slashes" />
+		<completion string="reduce_multiples" />
+		<completion string="quotes_to_entities" />
+		<completion string="strip_quotes" />
+		
+		<completion string="word_limiter" />
+		<completion string="character_limiter" />
+		<completion string="ascii_to_entities" />
+		<completion string="entities_to_ascii" />
+		<completion string="word_censor" />
+		<completion string="highlight_code" />
+		<completion string="highlight_phrase" />
+		<completion string="word_wrap" />
+		
+		<completion string="auto_typography" />
+		<completion string="nl2br_except_pre" />
+		
+		<completion string="site_url" />
+		<completion string="base_url" />
+		<completion string="current_url" />
+		<completion string="uri_string" />
+		<completion string="index_page" />
+		<completion string="anchor" />
+		<completion string="anchor_popup" />
+		<completion string="mailto" />
+		<completion string="safe_mailto" />
+		<completion string="auto_link" />
+		<completion string="url_title" />
+		<completion string="prep_url" />
+		<completion string="redirect" />
+		
+		<completion string="xml_convert" />
+		
+    </set>
+
+    <set name="com.codeigniter.classes">
+    
+    	<behavior>
+	        <append-dynamic>
+		        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+		        <transform-into>$0</transform-into>
+		    </append-dynamic>
+	    </behavior>
+	    	    
+	    <completion string="benchmark" />
+		<completion string="calendar" />
+		<completion string="config" />
+		<completion string="db" />
+		<completion string="email" />
+		<completion string="encrypt" />
+		<completion string="upload" />
+		<completion string="form_validation" />
+		<completion string="ftp" />
+		<completion string="table" />
+		<completion string="image_lib" />
+		<completion string="input" />
+		<completion string="load" />
+		<completion string="lang" />
+		<completion string="output" />
+		<completion string="pagination" />
+		<completion string="session" />
+		<completion string="trackback" />
+		<completion string="parser" />
+		<completion string="typography" />
+		<completion string="unit" />
+		<completion string="uri" />
+		<completion string="agent" />
+		<completion string="validation" />
+		<completion string="xmlrpc" />
+		<completion string="xmlrpcs" />
+		<completion string="zip" />
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.benchmark.methods">
+	    
+	    <completion string="mark">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:'marker_name'});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+		<completion string="elapsed_time">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:'marker_start'}, ${2:'marker_end'});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="memory_usage" />
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.calendar.methods">
+	
+		<completion string="generate">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>($1{:${2:[int]year}, ${3:[int]month}${4:, ${5:[array]data}}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.config.methods">
+	
+		<completion string="site_url" />
+		<completion string="system_url" />
+	
+		<completion string="load">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]'config_name'}${2:, ${3:[bool]Use config name}}${4:, ${5:[bool]Suppress Errors}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="item">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]'item name'}${2:, ${3:[str]array index}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="set_item">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]item name}, ${2:item value});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.db.methods">
+
+	</set>
+	
+	<set name="com.codeigniter.classes.email.methods">
+		
+		<completion string="from">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]email}, ${2:[str]Your name});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="reply_to">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]email}, ${2:[str]Your name});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="to">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]email}, ${2:[str]another email etc});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="cc">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]email}, ${2:[str]another email etc});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="bcc">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]email}, ${2:[str]another email etc});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="subject">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]subject});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="message">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]message});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="set_alt_message">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]This is the alternative message});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="clear">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[opt][bool]Clear Attachments});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="attach">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]'/path/to/photo1.jpg'});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+
+		<completion string="send" />
+		<completion string="print_debugger" />
+		<completion string="initialize" />
+		
+	</set>	
+
+	<set name="com.codeigniter.classes.encrypt.methods">
+	
+	    <completion string="encode">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]'message'}${2:, ${3:encryption_key}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="decode">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]encrypted_string});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="set_cipher">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:MCRYPT_RIJNDAEL_256});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="set_mode">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:MCRYPT_MODE_CFB});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+
+	    <completion string="sha1">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Some String});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+
+	</set>
+	
+	<set name="com.codeigniter.classes.upload.methods">
+		
+		<completion string="do_upload">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Form Field Name});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="initialize" />
+		
+		<completion string="display_errors">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:${2:[str]Format Before}, ${3:[str]Format After}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="data" />
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.form_validation.methods">
+		
+		<completion string="run" />
+		
+		<completion string="set_rules">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}, ${2:[str]Label}, ${3:[str]rule});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="set_message">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Rule}, ${2:[str]Error Message});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.ftp.methods">
+		
+		<completion string="connect">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:$config});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="upload">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Local Path}, ${2:[str]Remote Path}, ${3:[str]auto}, ${4:[int]Permissions});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="rename">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Target}, ${2:[str]Renamed Target});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="move">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Source}, ${2:[str]Destination});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="delete_file">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Target});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="delete_dir">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Target});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="list_dir">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Target});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="mirror">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Source}, ${2:[str]Destination});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="mkdir">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Folder Path}${2:, ${3:[int]Permissions}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="chmod">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Folder Path}${2:, ${3:[int]Permissions}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="close" />
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.table.methods">
+		
+		<completion string="generate" />
+		<completion string="clear" />
+		
+		<completion string="set_caption">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Caption});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="add_row">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Comma Separated Values});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="make_columns">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[array]Input}, ${2:Number of Columns});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="set_template">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[array]$tmpl});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="set_empty">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Empty Cell Contents});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.image_lib.methods">
+		
+		<completion string="resize" />
+		<completion string="crop" />
+		<completion string="rotate" />
+		<completion string="watermark" />
+		<completion string="clear" />
+		<completion string="display_errors" />
+		<completion string="initialize">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[array]$config});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.input.methods">
+	
+		<completion string="ip_address" />
+		<completion string="user_agent" />
+		
+		<completion string="xss_clean">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:data});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="post">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}${2:, ${3:[bool]TRUE}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="get">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}${2:, ${3:[bool]TRUE}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="get_post">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}${2:, ${3:[bool]TRUE}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="cookie">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}${2:, ${3:[bool]TRUE}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="server">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Field Name}${2:, ${3:[bool]TRUE}});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+		<completion string="valid_ip">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]IP Address});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.load.methods">
+	
+		<behavior>
+        	<append-dynamic>
+		        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+		        <transform-into>(${1:myThing});</transform-into>
+		    </append-dynamic>
+	    </behavior>
+	    
+	    <completion string="scaffolding" />
+		<completion string="vars" />
+		<completion string="helper" />
+		<completion string="plugin" />
+		<completion string="lang" />
+		<completion string="config" />
+		
+		<completion string="library">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Class}${2:, ${3:[array]Config}}${4:, ${5:Object Name}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="view">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]File Name}${2:, ${3:[array]data}}${4:, ${5:[bool]Return as string}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="model">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Model Name}${2:, ${3:[str]Object Name}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="database">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:${2:[str]DB Name}${3:, ${4:[bool]}}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="file">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]File}${2:, ${3:[bool]Return as string}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.lang.methods">
+		
+		<completion string="load">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]File}${2:, ${3:[str]Language}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="line">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Language Key});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.output.methods">
+		
+		<behavior>
+        	<append-dynamic>
+		        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+		        <transform-into>($1);</transform-into>
+		    </append-dynamic>
+    	</behavior>
+    	
+    	<completion string="get_output" />
+		<completion string="set_header" />
+		<completion string="set_status_header" />
+		<completion string="cache" />
+			    	
+		<completion string="set_output">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]data});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="enable_profiler">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[bool]});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.pagination.methods">
+		
+		<completion string="initialize" />
+		<completion string="create_links" />
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.session.methods">
+    	
+		<completion string="userdata">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:item});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="set_userdata">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Name}, ${2:[str]Value});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="unset_userdata">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:item});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="set_flashdata">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Name}, ${2:[str]Value});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+	   	</completion>
+	  
+		<completion string="flashdata">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:item});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+	    </completion>	
+	    
+		<completion string="sess_destroy" />
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.trackback.methods">
+		
+		<completion string="send" />
+		<completion string="display_errors" />
+		<completion string="send_error" />
+		<completion string="receive" />
+		<completion string="data" />
+		<completion string="send_success" />
+		
+	</set>
+	
+	<set name="com.codeigniter.classes.parser.methods">
+	
+		<completion string="parse">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[str]Template}, ${2:[array]Data}${3:, ${4:[bool]Return as string}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.typography.methods">
+	
+		<completion string="auto_typography">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:String}${2:, ${3:[bool]Reduce Line Breaks}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="format_characters">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:String});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="nl2br_except_pre">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:String});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="protect_braced_quotes">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>= TRUE;</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+
+	</set>
+	
+	<set name="com.codeigniter.classes.unit.methods">
+	
+		<completion string="run" />
+		<completion string="report" />
+		<completion string="result" />
+		<completion string="use_strict" />
+		<completion string="active" />
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.uri.methods">
+	
+		<completion string="segment" />
+		<completion string="rsegment" />
+		<completion string="uri_string" />
+		<completion string="ruri_string" />
+		<completion string="total_segments" />
+		<completion string="total_rsegments" />
+		<completion string="segment_array" />
+		<completion string="rsegment_array" />
+		
+		<completion string="uri_to_assoc">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[int]Offset}${2:, ${3:[array]Default Key Names}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="ruri_to_assoc">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[int]Offset}${2:, ${3:[array]Default Key Names}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="assoc_to_uri">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[array]Key Value Pairs});</transform-into>
+			    </append-dynamic>
+	    	</behavior>
+		</completion>
+		
+		<completion string="slash_segment">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[int]Segment}${2:, ${3:leading|both}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>			
+		</completion>
+		
+		<completion string="slash_rsegment">
+			<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:[int]Segment}${2:, ${3:leading|both}});</transform-into>
+			    </append-dynamic>
+	    	</behavior>			
+		</completion>
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.agent.methods">
+	
+		<completion string="is_browser" />
+		<completion string="browser" />
+		<completion string="version" />
+		
+		<completion string="is_robot" />
+		<completion string="robot" />
+		
+		<completion string="is_mobile" />
+		<completion string="mobile" />
+		
+		<completion string="is_referral" />
+		<completion string="referrer" />
+		
+		<completion string="accept_charset" />
+		<completion string="accept_lang" />
+		<completion string="agent_string" />
+		<completion string="platform" />
+	
+	</set>
+	
+	<set name="com.codeigniter.classes.zip.methods">
+	
+	    <completion string="clear_data" />
+	    <completion string="get_zip" />
+	    
+	    <completion string="download">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:'myarchive.zip'});</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="archive">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:'/path/to/folder/myarchive.zip'});$2</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="read_dir">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:Directory});$2</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="read_file">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:File}${2:, ${3:[boolean]Keep Directory Structure}});$4</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="add_dir">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:folder_name});$2</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>
+	    
+	    <completion string="add_data">
+	    	<behavior>
+	        	<append-dynamic>
+			        <matched-suffix>(\s*:)|[^:]</matched-suffix>
+			        <transform-into>(${1:name},${2:data});$3</transform-into>
+			    </append-dynamic>
+		    </behavior>
+	    </completion>	
+
+	</set>
+    
+</codesense>
